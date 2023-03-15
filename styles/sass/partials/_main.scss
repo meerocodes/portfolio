@@ -1,0 +1,14 @@
+@use './typography';
+@use './variables';
+.skills {
+    height: 100vh;
+    background-image:url('../assets/sectionImage.png') ;
+    background-size: cover;
+}
+
+.projects {
+    height: 100vh;
+    background-image: url('../assets/sectionImage2.png');
+    background-size: cover;
+
+}

@@ -12,8 +12,20 @@ html {
   margin: 0;
 }
 
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu Mono", monospace;
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
 header {
-  height: 80vh;
+  height: 100vh;
   position: relative;
   background-size: cover;
   background-image: url("../assets/mainHeader.png");
@@ -30,15 +42,22 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 header .text {
-  margin-top: 400px;
   text-align: center;
-  position: relative;
   color: #e6dedd;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 header .text span {
-  font-size: 3rem;
+  font-size: clamp(1rem, 5vw, 4rem);
+}
+header .text h2 {
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
 }
 
 nav {
@@ -51,16 +70,33 @@ nav {
   width: 100%;
   margin-top: 10px;
   color: #e6dedd;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 0;
+  gap: 50px;
+  margin-top: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 ul a {
   color: #e6dedd;
@@ -71,6 +107,10 @@ ul a:hover {
   transition: all 0.25s ease-in-out;
 }
 
+.icon {
+  width: 100%;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,18 +119,19 @@ ul a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: sticky;
+  position: absolute;
   margin-right: auto;
+  left: 50px;
 }
 
-ul, li, a {
-  text-decoration: none;
-  list-style: none;
-  font-family: "Ubuntu Mono", monospace;
-  margin: 0;
+.skills {
+  height: 100vh;
+  background-image: url("../assets/sectionImage.png");
+  background-size: cover;
 }
 
-h1, h2, h3, p {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
+.projects {
+  height: 100vh;
+  background-image: url("../assets/sectionImage2.png");
+  background-size: cover;
 }
