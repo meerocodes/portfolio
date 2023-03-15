@@ -1,0 +1,66 @@
+@use './variables' as *;
+
+
+
+header {
+    height: 80vh;
+    position: relative;
+    background-size: cover;
+    background-image: url("../assets/mainHeader.png"); 
+    opacity: 1.9;
+    &:hover {
+
+    }
+    
+ 
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text {
+        margin-top: 400px;
+        text-align: center;
+        position: relative;
+        color: $baseFC;
+
+
+        span{
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+    color: $baseFC;
+
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    a{
+        color: $baseFC;
+        &:hover{
+            color:pink;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    margin-right: auto;
+    
+    
+}

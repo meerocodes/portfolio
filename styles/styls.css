@@ -1,0 +1,96 @@
+.wrapper {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  margin: 0;
+}
+
+header {
+  height: 80vh;
+  position: relative;
+  background-size: cover;
+  background-image: url("../assets/mainHeader.png");
+  opacity: 1.9;
+}
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .text {
+  margin-top: 400px;
+  text-align: center;
+  position: relative;
+  color: #e6dedd;
+}
+header .text span {
+  font-size: 3rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  color: #e6dedd;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+ul a {
+  color: #e6dedd;
+}
+ul a:hover {
+  color: pink;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: sticky;
+  margin-right: auto;
+}
+
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu Mono", monospace;
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
