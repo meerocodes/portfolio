@@ -1,14 +1,73 @@
 @use './typography';
-@use './variables';
+@use './variables' as*;
 .skills {
     height: 100vh;
     background-image:url('../assets/sectionImage.png') ;
     background-size: cover;
+    .wrapper{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        ul{
+            display: flex;
+            width: 100%;
+            margin-top: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            
+
+        }
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 25%;
+        }
+    }
+    h2{
+        margin-top: 50px;
+        color: $baseFC;
+        font-size: clamp(1rem, 10vw, 3rem);
+        text-decoration: underline solid rgb(252, 237, 239) 8px;  
+    }
+    i{
+        font-size: clamp(3rem,7vw,6rem);
+        color: rgb(252, 237, 239);
+       
+        &:hover{
+            color: pink;
+            transition: all 0.2s ease-in-out;
+            transform: scale(1.01);
+
+        }
+    }
+    h3{
+        font-size: clamp(.6rem,2vw, 1rem);
+        font-family: $secondaryFont;
+        color: $baseFC;
+        text-align: center;
+        margin-top: 10px;
+    }
 }
 
 .projects {
     height: 100vh;
     background-image: url('../assets/sectionImage2.png');
     background-size: cover;
+    .wrapper{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
 
+    }
+
+    h2{
+        margin-top: 50px;
+        color: $baseFC;
+        font-size: clamp(1rem, 10vw, 3rem);
+        text-decoration: underline solid rgb(252, 237, 239) 8px;  
+    }
 }
