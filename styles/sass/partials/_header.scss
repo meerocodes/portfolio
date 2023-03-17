@@ -17,7 +17,14 @@ a.light{
         color: rgb(255, 102, 128);
     }
 }
+a .socialIcon.light{
+    color: $lightModeFC;
+    &:hover{
+        color: rgb(255, 102, 128);
+        text-shadow: 0 0 20px black;     
 
+    }
+}
 h2.light {
     color: $lightModeFC;
 
@@ -33,7 +40,6 @@ header {
 
     }
     
- 
     .wrapper{
         display: flex;
         flex-direction: column;
@@ -60,17 +66,18 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-top: 10px;
     flex-grow: 1;
-    position:sticky;
+    flex-wrap: wrap;
+    gap: 25px;
     label{
         position: absolute;
         width: 45px;
         height: 22px;
         right: 40px;
-        top: 20px;
+        top: 15px;
         color: white;
         border: 2px solid;
         border-radius: 20px;
@@ -93,20 +100,14 @@ nav {
         color: black;
      
     }
-
-}
-.logo{
-    flex-grow: 1;
-    color: $baseFC;
-}
-
-ul {
+    ul {
     display: flex;
     padding: 0;
     gap: 20px;
+    margin-right: 80px;
     margin-top: 5px;
     align-items: start;
-    flex-grow: 4;
+    flex-grow: 3;
     justify-content:flex-start;
 
     a{
@@ -119,22 +120,35 @@ ul {
         
     }
 }
+}
+.logo{
+    flex-shrink: 1;
+    color: $baseFC;
+}
+
+
 .icon{
     width: 100%
 }
 .socials {
     display: flex;
+    padding: 0;
     flex-direction: column;
     position: fixed;
     margin-right: auto;
     left:30px;
-    i{
+    gap: 20px;
+    .socialIcon{
+        color: $baseFC;
         font-size: clamp(1rem, 3vw,1.8rem);
+
 
         &:hover{
             color: pink;     
             transform: scale(1.2);   
-            transition: all 0.5s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            text-shadow: 0 0 20px #fde5e5;     
+
 
         }
        

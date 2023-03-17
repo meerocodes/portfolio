@@ -1,0 +1,13 @@
+@use './variables' as *;
+@use './typography';
+
+footer{
+    background-color: rgb(40, 39, 39);
+    height: 50px;
+    font-family: $secondaryFont;
+    font-size: 1.5rem;
+    color: $baseFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
