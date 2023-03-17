@@ -24,12 +24,35 @@ h1, h2, h3, p {
   font-family: "Montserrat", sans-serif;
 }
 
+header.light {
+  background-image: url("/assets/lightMode/lightMainHeader.png");
+}
+
+h1.light {
+  color: rgb(25, 24, 24);
+}
+
+.text.light {
+  color: rgb(25, 24, 24);
+}
+
+a.light {
+  color: rgb(25, 24, 24);
+}
+a.light:hover {
+  color: rgb(255, 102, 128);
+}
+
+h2.light {
+  color: rgb(25, 24, 24);
+}
+
 header {
   height: 100vh;
+  min-height: 860px;
   position: relative;
   background-size: cover;
   background-image: url("../assets/mainHeader.png");
-  opacity: 1.9;
 }
 header .wrapper {
   display: -webkit-box;
@@ -73,6 +96,33 @@ nav {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  position: sticky;
+}
+nav label {
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  right: 40px;
+  top: 20px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+nav label:before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 1px;
+  top: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+nav label.active::before {
+  left: 24px;
+  color: black;
 }
 
 .logo {
@@ -100,6 +150,7 @@ ul {
 }
 ul a {
   color: #e6dedd;
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 ul a:hover {
   color: pink;
@@ -134,10 +185,52 @@ ul a:hover {
   transition: all 0.5s ease-in-out;
 }
 
+.skills.light {
+  background-image: url("/assets/lightMode/lightSectionImage2.png");
+}
+
+.projects.light {
+  background-image: url("/assets/lightMode/lightSectionImage.png");
+}
+
+.contact.light {
+  background-image: url("/assets/lightMode/lightSectionImage3.png");
+}
+
+.skills h2.light {
+  color: rgb(25, 24, 24);
+  -webkit-text-decoration: underline solid rgb(23, 23, 23) 8px;
+          text-decoration: underline solid rgb(23, 23, 23) 8px;
+}
+
+.projects h2.light {
+  color: rgb(25, 24, 24);
+  -webkit-text-decoration: underline solid rgb(23, 23, 23) 8px;
+          text-decoration: underline solid rgb(23, 23, 23) 8px;
+}
+
+.contact h2.light {
+  color: rgb(25, 24, 24);
+  -webkit-text-decoration: underline solid rgb(23, 23, 23) 8px;
+          text-decoration: underline solid rgb(23, 23, 23) 8px;
+}
+
+.skillIcon.light {
+  color: #000000;
+  text-shadow: 0 0 15px #fde5e5;
+}
+
 .skills {
+  border-top: solid rgb(252, 237, 239) 20px;
   height: 100vh;
-  background-image: url("../assets/sectionImage.png");
+  min-height: 860px;
+  background-image: url("../assets/sectionImage2.png");
   background-size: cover;
+}
+.skills:hover {
+  border-top: solid rgb(236, 199, 199) 40px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .skills .wrapper {
   width: 80%;
@@ -175,7 +268,7 @@ ul a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25%;
+  width: 20%;
 }
 .skills h2 {
   margin-top: 50px;
@@ -186,7 +279,7 @@ ul a:hover {
 }
 .skills i {
   font-size: clamp(3rem, 7vw, 6rem);
-  color: rgb(252, 237, 239);
+  color: rgb(252, 229, 229);
 }
 .skills i:hover {
   color: pink;
@@ -196,17 +289,25 @@ ul a:hover {
           transform: scale(1.01);
 }
 .skills h3 {
-  font-size: clamp(0.6rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
   font-family: "Ubuntu Mono", monospace;
-  color: #e6dedd;
+  color: rgb(209, 213, 209);
+  text-shadow: 0 0 8px #000000;
   text-align: center;
   margin-top: 10px;
 }
 
 .projects {
+  border-top: solid rgb(252, 237, 239) 20px;
   height: 100vh;
-  background-image: url("../assets/sectionImage2.png");
+  min-height: 860px;
+  background-image: url("../assets/sectionImage.png");
   background-size: cover;
+}
+.projects:hover {
+  border-top: solid rgb(236, 199, 199) 40px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .projects .wrapper {
   width: 80%;
@@ -227,4 +328,17 @@ ul a:hover {
   font-size: clamp(1rem, 10vw, 3rem);
   -webkit-text-decoration: underline solid rgb(252, 237, 239) 8px;
           text-decoration: underline solid rgb(252, 237, 239) 8px;
+}
+
+.contact {
+  border-top: solid rgb(236, 199, 199) 20px;
+  height: 100vh;
+  min-height: 860px;
+  background-image: url("../assets/sectionImage3.png");
+  background-size: cover;
+}
+.contact:hover {
+  border-top: solid rgb(236, 199, 199) 40px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }

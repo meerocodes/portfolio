@@ -1,9 +1,49 @@
 @use './typography';
 @use './variables' as*;
+
+// LIGHT STYLES
+.skills.light {
+    background-image:url('/assets/lightMode/lightSectionImage2.png') ;
+}
+.projects.light {
+    background-image:url('/assets/lightMode/lightSectionImage.png') ;
+
+}
+.contact.light {
+    background-image:url('/assets/lightMode/lightSectionImage3.png') ;
+
+}
+
+.skills h2.light {
+    color: $lightModeFC;
+    text-decoration: underline solid rgb(23, 23, 23) 8px;  
+}
+.projects h2.light {
+    color: $lightModeFC;
+    text-decoration: underline solid rgb(23, 23, 23) 8px;  
+}
+.contact h2.light {
+    color: $lightModeFC;
+    text-decoration: underline solid rgb(23, 23, 23) 8px;  
+}
+
+.skillIcon.light {
+    color: #000000;
+    text-shadow: 0 0 15px #fde5e5;     
+
+}
+// SKILLS SECTION STYLES
 .skills {
+    border-top: solid rgb(252, 237, 239) 20px;
     height: 100vh;
-    background-image:url('../assets/sectionImage.png') ;
+    min-height: 860px;
+    background-image:url('../assets/sectionImage2.png') ;
     background-size: cover;
+        &:hover{
+            border-top: solid rgb(236, 199, 199) 40px;
+            transition: all 0.5s ease-in-out;
+
+        }
     .wrapper{
         width: 80%;
         display: flex;
@@ -23,7 +63,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 25%;
+            width: 20%;
         }
     }
     h2{
@@ -34,7 +74,7 @@
     }
     i{
         font-size: clamp(3rem,7vw,6rem);
-        color: rgb(252, 237, 239);
+        color: rgb(252, 229, 229);
        
         &:hover{
             color: pink;
@@ -44,18 +84,26 @@
         }
     }
     h3{
-        font-size: clamp(.6rem,2vw, 1rem);
+        font-size: clamp(.8rem,2vw, 1.3rem);
         font-family: $secondaryFont;
-        color: $baseFC;
+        color: rgb(209, 213, 209);
+        text-shadow: 0 0 8px #000000;     
         text-align: center;
         margin-top: 10px;
     }
 }
-
+// PROJECTS SECTION STYLES
 .projects {
+    border-top: solid rgb(252, 237, 239) 20px;
     height: 100vh;
-    background-image: url('../assets/sectionImage2.png');
+    min-height: 860px;
+    background-image: url('../assets/sectionImage.png');
     background-size: cover;
+    &:hover{
+        border-top: solid rgb(236, 199, 199) 40px;
+        transition: all 0.5s ease-in-out;
+
+    }
     .wrapper{
         width: 80%;
         display: flex;
@@ -69,5 +117,20 @@
         color: $baseFC;
         font-size: clamp(1rem, 10vw, 3rem);
         text-decoration: underline solid rgb(252, 237, 239) 8px;  
+    }
+}
+
+//  CONTACT SECTION STYLES
+
+.contact {
+    border-top: solid rgb(236, 199, 199) 20px;
+    height: 100vh;
+    min-height: 860px;
+    background-image: url('../assets/sectionImage3.png');
+    background-size: cover;
+    &:hover{
+        border-top: solid rgb(236, 199, 199) 40px;
+        transition: all 0.5s ease-in-out;
+
     }
 }
