@@ -63,7 +63,6 @@ nav {
     justify-content: space-between;
     width: 100%;
     margin-top: 10px;
-    color: $baseFC;
     flex-grow: 1;
     position:sticky;
     label{
@@ -72,6 +71,7 @@ nav {
         height: 22px;
         right: 40px;
         top: 20px;
+        color: white;
         border: 2px solid;
         border-radius: 20px;
         &:before{
@@ -89,12 +89,15 @@ nav {
        }
     label.active::before{
         left: 24px;
+        background: black;
         color: black;
+     
     }
 
 }
 .logo{
     flex-grow: 1;
+    color: $baseFC;
 }
 
 ul {
@@ -113,6 +116,7 @@ ul {
             color:pink;
             transition: all 0.25s ease-in-out;
         }
+        
     }
 }
 .icon{
@@ -133,6 +137,7 @@ ul {
             transition: all 0.5s ease-in-out;
 
         }
+       
     }
    
 
