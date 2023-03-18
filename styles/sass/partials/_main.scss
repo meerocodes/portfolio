@@ -14,6 +14,7 @@
 
 }
 
+
 .skills h2.light {
     color: $lightModeFC;
     text-decoration: underline solid rgb(23, 23, 23) 8px;  
@@ -31,6 +32,12 @@
     color: #000000;
     text-shadow: 0 0 15px #fde5e5;     
 
+}
+.projects .wrapper p.light {
+    color: #000000;
+}
+#prjDownArrow.light{
+    color: $lightModeFC;
 }
 // SKILLS SECTION STYLES
 .skills {
@@ -102,29 +109,64 @@
     min-height: 860px;
     background-image: url('../assets/sectionImage.png');
     background-size: cover;
+    padding-bottom: 75px;
     &:hover{
         border-top: solid rgb(236, 199, 199) 40px;
         transition: all 0.5s ease-in-out;
 
     }
     .wrapper{
+        p {
+            color: #fde5e5;
+            margin-top: 20px;
+        }
+        .fa-angle-down{
+            color: #fde5e5;
+            margin-top: 15px;
+            font-size: 2rem;
+            position: relative; 
+            animation: moveDown 1.2s ease-in-out infinite; 
+          }
+          
+          @keyframes moveDown {
+            0% {
+              top: 0; 
+            }
+            50% {
+              top: 10px; 
+            }
+            100% {
+              top: 0; 
+            }
+          }
         width: 80%;
         display: flex;
         flex-direction: column;
         align-items:center;
         .imgWrap{
             display: inline-block;
-            width: 40%;
+            width: 45%;
             position: relative;
             margin-top: 100px;
 
         }
+        h3{
+            color: $baseFC;
+        }
         h4{
             font-family: $baseFont;
+            text-shadow: 0 0 2px #000000;     
+            padding: 5px 10px;
+
         }
         .liveLinks{
             color: $baseFC;
             background-color: #000000;
+            font-size: 1.1rem;
+            padding: 5px 10px;
+            text-shadow: 0 0 8px #fbd7d7;     
+
+
             &:hover{
                 color: pink;
             }
@@ -199,4 +241,52 @@
         font-size: clamp(1rem, 10vw, 3rem);
         text-decoration: underline solid rgb(252, 237, 239) 8px;  
     }
+    form{
+        margin-top: 75px;
+        width: 75%;
+    }
+    .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    }
+
+    .form-group label {
+    margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group textarea {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    }
+
+    .form-group textarea {
+    height: 150px;
+    }
+
+    .submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffd3d3;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background-color: #ff8080;
+        transform: scale(1.01);
+
+    }
+    }
+
 }

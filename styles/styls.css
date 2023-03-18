@@ -303,6 +303,14 @@ nav ul a:hover {
   text-shadow: 0 0 15px #fde5e5;
 }
 
+.projects .wrapper p.light {
+  color: #000000;
+}
+
+#prjDownArrow.light {
+  color: rgb(25, 24, 24);
+}
+
 .skills {
   border-top: solid rgb(252, 237, 239) 20px;
   height: 100vh;
@@ -390,6 +398,7 @@ nav ul a:hover {
   min-height: 860px;
   background-image: url("../assets/sectionImage.png");
   background-size: cover;
+  padding-bottom: 75px;
 }
 .projects:hover {
   border-top: solid rgb(236, 199, 199) 40px;
@@ -409,18 +418,60 @@ nav ul a:hover {
       -ms-flex-align: center;
           align-items: center;
 }
+.projects .wrapper p {
+  color: #fde5e5;
+  margin-top: 20px;
+}
+.projects .wrapper .fa-angle-down {
+  color: #fde5e5;
+  margin-top: 15px;
+  font-size: 2rem;
+  position: relative;
+  -webkit-animation: moveDown 1.2s ease-in-out infinite;
+          animation: moveDown 1.2s ease-in-out infinite;
+}
+@-webkit-keyframes moveDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes moveDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
 .projects .wrapper .imgWrap {
   display: inline-block;
-  width: 40%;
+  width: 45%;
   position: relative;
   margin-top: 100px;
 }
+.projects .wrapper h3 {
+  color: #e6dedd;
+}
 .projects .wrapper h4 {
   font-family: "Montserrat", sans-serif;
+  text-shadow: 0 0 2px #000000;
+  padding: 5px 10px;
 }
 .projects .wrapper .liveLinks {
   color: #e6dedd;
   background-color: #000000;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  text-shadow: 0 0 8px #fbd7d7;
 }
 .projects .wrapper .liveLinks:hover {
   color: pink;
@@ -505,6 +556,54 @@ nav ul a:hover {
   font-size: clamp(1rem, 10vw, 3rem);
   -webkit-text-decoration: underline solid rgb(252, 237, 239) 8px;
           text-decoration: underline solid rgb(252, 237, 239) 8px;
+}
+.contact form {
+  margin-top: 75px;
+  width: 75%;
+}
+.contact .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+.contact .form-group label {
+  margin-bottom: 5px;
+}
+.contact .form-group input, .contact .form-group textarea {
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+}
+.contact .form-group input:focus, .contact .form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.contact .form-group textarea {
+  height: 150px;
+}
+.contact .submit-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffd3d3;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.contact .submit-btn:hover {
+  background-color: #ff8080;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 footer {

@@ -8,10 +8,11 @@ const socialIcon = document.getElementsByClassName('socialIcon');
 const skillIcons = document.getElementsByClassName('skillIcon');
 const p = document.querySelectorAll('p');
 const arrow = document.getElementById('topArrow');
+const arrowDown = document.getElementById('prjDownArrow');
 
-const elementsToToggle = [lightMode,...header,...h1, ...sections, ...aLinks, ...titles, ...skillIcons, ...socialIcon, ...p, ];
+const elementsToToggle = [prjDownArrow, lightMode,...header,...h1, ...sections, ...aLinks, ...titles, ...skillIcons, ...socialIcon, ...p, ];
 
-const goDark = document.getElementById('goDark');
+// const goDark = document.getElementById('goDark');
 
 
 lightMode.addEventListener('click', function(){
