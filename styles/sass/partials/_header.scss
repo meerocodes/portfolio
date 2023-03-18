@@ -8,6 +8,12 @@ header.light{
 h1.light{
     color: $lightModeFC;
 }
+p.light {
+    color: #000000;
+}
+#topArrow.light {
+    color: #000000;
+}
 .text.light{
     color: $lightModeFC;
 }
@@ -72,6 +78,55 @@ nav {
     flex-grow: 1;
     flex-wrap: wrap;
     gap: 25px;
+    p{
+        color: $baseFC;
+        font-family:$secondaryFont;
+        position: absolute;
+        top: 110px;
+        right: 15px;
+        width: 100px;
+        text-align: center;
+        text-shadow: 0 0 5px #000000; 
+    }
+
+        .lightDarkModeContainer {
+            right: 0;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+        }
+        .fa-arrow-up {
+        position: absolute;
+        top: 70px;
+        right: 50px;
+        color: white;
+        text-align: center;
+        margin: 8% 0;
+        }
+        .bounce {
+        -moz-animation: bounce 3.3s infinite;
+        -webkit-animation: bounce 3.3s infinite;
+        animation: bounce 3.3s infinite;
+        }
+        
+        @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+        
+        
+
+    }
     label{
         position: absolute;
         width: 45px;
