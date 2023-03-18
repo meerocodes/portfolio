@@ -112,6 +112,57 @@
         display: flex;
         flex-direction: column;
         align-items:center;
+        .imgWrap{
+            display: inline-block;
+            width: 40%;
+            position: relative;
+            margin-top: 100px;
+
+        }
+        h4{
+            font-family: $baseFont;
+        }
+        .liveLinks{
+            color: $baseFC;
+            background-color: #000000;
+            &:hover{
+                color: pink;
+            }
+        }
+        .projectContent{
+            text-align: center;
+            position: absolute;
+            gap: 10px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s;
+          }
+        .imgWrap:hover .projectContent{
+            opacity: 1;
+        }
+        img {
+            width: 100%;
+            box-shadow:0 0 20px white ;
+        }
+        #firstProject {
+            margin-right: 150px;
+           
+
+        }
+        #secondProject {
+            margin-left: 150px;
+           
+
+        }
 
     }
 
