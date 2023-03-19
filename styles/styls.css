@@ -101,6 +101,18 @@ header .text h2 {
   text-shadow: 0 0 10px white;
 }
 
+.socialsArrow {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 90;
+}
+.socialsArrow .socialsTab {
+  display: none;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -531,7 +543,7 @@ header .text h2 {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -707,14 +719,24 @@ footer {
   }
 }
 @media (max-width: 1000px) {
-  .socials {
-    left: 10px;
-  }
   .logo {
     margin-left: 25px;
   }
 }
 @media (max-width: 657px) {
+  .socials.light {
+    background-color: #f7f7f7;
+  }
+  .arrowRight.light {
+    color: black;
+  }
+  .bar.light {
+    background-color: black;
+  }
+  .wrapper .socialsArrow .socialsTab span.light {
+    color: black;
+    background-color: #f7f7f7;
+  }
   .wrapper {
     width: 90%;
   }
@@ -760,5 +782,50 @@ footer {
   .hamburger.active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
+  }
+  .socialsArrow {
+    display: block;
+    color: #f7f7f7;
+    margin-right: 15px;
+  }
+  .socialsArrow .socialsTab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 30px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+  }
+  .socialsArrow .socialsTab span {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #e6dedd;
+    background-color: black;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .socials {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .socials a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .socialsArrow.active .socials {
+    display: block;
   }
 }

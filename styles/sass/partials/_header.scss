@@ -74,7 +74,18 @@ header {
     }
 }
 
+.socialsArrow{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 90;
 
+    .socialsTab{
+        display: none;
+    }
+
+}
 .hamburger{
     display: none;
     cursor: pointer;

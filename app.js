@@ -9,10 +9,13 @@ const skillIcons = document.getElementsByClassName('skillIcon');
 const p = document.querySelectorAll('p');
 const arrow = document.getElementById('topArrow');
 const arrowDown = document.getElementById('prjDownArrow');
+const socials = document.getElementsByClassName('socials');
+const arrowRight = document.getElementsByClassName('arrowRight');
+const span = document.getElementsByTagName('span');
 
-const elementsToToggle = [prjDownArrow, lightMode,...header,...h1, ...sections, ...aLinks, ...titles, ...skillIcons, ...socialIcon, ...p, ];
+const elementsToToggle = [prjDownArrow, lightMode,...header,...h1, ...sections, ...aLinks, ...titles, ...skillIcons, ...socialIcon, ...p, ...socials, ...arrowRight, ...span];
 
-// const goDark = document.getElementById('goDark');
+const goDark = document.getElementById('goDark');
 
 
 lightMode.addEventListener('click', toggleLightMode);
@@ -45,8 +48,27 @@ hamburger.addEventListener('click', () =>{
     navMenu.classList.toggle('active');
 
 
-})
+});
 
 
+const socialArrow = document.querySelector('.socialsArrow');
+const arrowIcon = socialArrow.querySelector('.arrowRight');
+
+socialArrow.addEventListener('click', () => {
+    socialArrow.classList.toggle('active');
+    
+    if (arrowIcon.classList.contains('fa-chevron-right')) {
+        arrowIcon.classList.remove('fa-chevron-right');
+        arrowIcon.classList.add('fa-chevron-left');
+      } else {
+        arrowIcon.classList.remove('fa-chevron-left');
+        arrowIcon.classList.add('fa-chevron-right');
+      }
+
+
+
+
+
+});
 
 
