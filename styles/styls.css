@@ -101,7 +101,22 @@ header .text h2 {
   text-shadow: 0 0 10px white;
 }
 
-nav {
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+.navBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,7 +132,7 @@ nav {
   top: 0;
   margin-top: 15px;
 }
-nav p {
+.navBar p {
   color: #e6dedd;
   font-family: "Ubuntu Mono", monospace;
   position: absolute;
@@ -127,7 +142,7 @@ nav p {
   text-align: center;
   text-shadow: 0 0 5px #000000;
 }
-nav .lightDarkModeContainer {
+.navBar .lightDarkModeContainer {
   right: 0;
   position: absolute;
   display: -webkit-box;
@@ -138,7 +153,7 @@ nav .lightDarkModeContainer {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-nav .fa-arrow-up {
+.navBar .fa-arrow-up {
   position: absolute;
   top: 70px;
   right: 50px;
@@ -146,7 +161,7 @@ nav .fa-arrow-up {
   text-align: center;
   margin: 8% 0;
 }
-nav .bounce {
+.navBar .bounce {
   -webkit-animation: bounce 3.3s infinite;
   animation: bounce 3.3s infinite;
 }
@@ -178,7 +193,7 @@ nav .bounce {
             transform: translateY(-15px);
   }
 }
-nav label {
+.navBar label {
   position: absolute;
   width: 45px;
   height: 22px;
@@ -188,10 +203,10 @@ nav label {
   border: 2px solid;
   border-radius: 20px;
 }
-nav label:focus {
+.navBar label:focus {
   background-color: rgb(0, 116, 154);
 }
-nav label:before {
+.navBar label:before {
   position: absolute;
   content: "";
   width: 20px;
@@ -204,12 +219,12 @@ nav label:before {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-nav label.active::before {
+.navBar label.active::before {
   left: 24px;
   background: black;
   color: black;
 }
-nav ul {
+.navBar ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,22 +243,22 @@ nav ul {
           justify-content: flex-start;
   line-height: 1.2rem;
 }
-nav ul li:hover {
+.navBar ul li:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
-nav ul a {
+.navBar ul a {
   background-color: #000000;
   padding: 3px 3px;
   color: #e6dedd;
   font-size: clamp(1rem, 3vw, 1.2rem);
 }
-nav ul a:hover {
+.navBar ul a:hover {
   color: pink;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-nav ul a:focus {
+.navBar ul a:focus {
   background-color: rgb(0, 116, 154);
 }
 
@@ -477,7 +492,7 @@ nav ul a:focus {
 }
 .projects .wrapper .imgWrap {
   display: inline-block;
-  width: 45%;
+  width: 50%;
   position: relative;
   margin-top: 100px;
 }
@@ -486,13 +501,15 @@ nav ul a:focus {
 }
 .projects .wrapper h4 {
   font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   text-shadow: 0 0 2px #000000;
   padding: 5px 10px;
+  margin-bottom: 0;
 }
 .projects .wrapper .liveLinks {
   color: #e6dedd;
   background-color: #000000;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   padding: 5px 10px;
   text-shadow: 0 0 8px #fbd7d7;
 }
@@ -656,4 +673,84 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .projects .wrapper {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .wrapper .imgWrap {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+  }
+  .projects .wrapper #firstProject {
+    margin-right: 0;
+  }
+  .projects .wrapper #secondProject {
+    margin-left: 0;
+  }
+  .contact form {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .socials {
+    left: 10px;
+  }
+  .logo {
+    margin-left: 25px;
+  }
+}
+@media (max-width: 657px) {
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+  }
+  .navMenu .navItem {
+    margin: 15px 0;
+  }
+  .navMenu.active {
+    left: 0;
+    gap: 0px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
 }

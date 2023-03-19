@@ -75,8 +75,21 @@ header {
 }
 
 
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
 
-nav {
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin:5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.navBar {
     display: flex;
     width: 100%;
     margin-top: 10px;
@@ -87,7 +100,6 @@ nav {
     top: 0;
     margin-top: 15px;
     
-   
     p{
         color: $baseFC;
         font-family:$secondaryFont;

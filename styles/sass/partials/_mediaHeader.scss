@@ -1,0 +1,52 @@
+@use './typography';
+@use './variables' as*;
+
+@media (max-width: 1000px) {
+
+.socials {
+    left: 10px;
+}
+.logo {
+    margin-left:25px;
+}
+}
+
+@media (max-width: 657px) {
+    .navMenu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        margin-top: -10px;
+        text-align: center;
+        transition: 0.1s;
+        .navItem{
+            margin: 15px 0;
+
+        }
+
+    }
+    .navMenu.active{
+        left:0;
+        gap: 0px;
+        justify-content: flex-start;
+    }
+   .hamburger {
+        display:block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0; 
+
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg); 
+
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg); 
+
+    }
+
+}

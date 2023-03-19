@@ -145,7 +145,7 @@
         align-items:center;
         .imgWrap{
             display: inline-block;
-            width: 45%;
+            width: 50%;
             position: relative;
             margin-top: 100px;
 
@@ -155,16 +155,19 @@
         }
         h4{
             font-family: $baseFont;
+            font-size: clamp(.8rem, 2vw, 1.2rem);
             text-shadow: 0 0 2px #000000;     
             padding: 5px 10px;
+            margin-bottom: 0;
 
         }
         .liveLinks{
             color: $baseFC;
             background-color: #000000;
-            font-size: 1.1rem;
+            font-size: clamp(.8rem, 2vw, 1.2rem);
             padding: 5px 10px;
-            text-shadow: 0 0 8px #fbd7d7;     
+            text-shadow: 0 0 8px #fbd7d7;  
+
 
             &:hover{
                 color: pink;

@@ -13,25 +13,30 @@
     <script src="https://kit.fontawesome.com/7d74ec3fb0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header >
+    <header id="header">
         
         <div class="wrapper">
             
-            <nav>
-                    <h2 class="logo">amiracle</h2>                
-                <ul>
-                    <li><a href = #skills >// skills</a></li>
-                    <li><a href = #projects >// projects</a></li>
-                    <li><a href = #contact >// get in touch</a></li>
+            <nav class="navBar">
+                <a href="#header"><h2 class="logo">amiracle</h2></a>                
+                <ul class="navMenu">
+                    <li class="navItem"><a href = #skills >// skills</a></li>
+                    <li class="navItem"><a href = #projects >// projects</a></li>
+                    <li class="navItem"><a href = #contact >// get in touch</a></li>
+                    <div class="lightDarkModeContainer" class="navItem">
+                        <label id="lightChange"tabindex="0"></label>
+                            <div class="arrow bounce">
+                            <a class="fa fa-arrow-up fa-2x" id='topArrow'href="#"></a>
+                            </div>
+                            <p id="goDark">go light</p>
+                    </div>
                 </ul>
-                <div class="lightDarkModeContainer">
-                    <label id="lightChange"tabindex="0"></label>
-                        <div class="arrow bounce">
-                        <a class="fa fa-arrow-up fa-2x" id='topArrow'href="#"></a>
-                        </div>
-                    
-                        <p id="goDark">go light</p>
-                    
+              
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
                
             </nav>
