@@ -105,8 +105,7 @@
 // PROJECTS SECTION STYLES
 .projects {
     border-top: solid rgb(252, 237, 239) 20px;
-    height: 100vh;
-    min-height: 860px;
+    min-height: 100vh;
     background-image: url('../assets/sectionImage.png');
     background-size: cover;
     padding-bottom: 75px;
@@ -116,6 +115,7 @@
 
     }
     .wrapper{
+        height: 100%;
         p {
             color: #fde5e5;
             margin-top: 20px;
@@ -190,6 +190,8 @@
           }
         .imgWrap:hover .projectContent{
             opacity: 1;
+            z-index: 10;
+
         }
         img {
             width: 100%;
@@ -197,6 +199,7 @@
         }
         #firstProject {
             margin-right: 150px;
+            
            
 
         }
@@ -242,8 +245,9 @@
         text-decoration: underline solid rgb(252, 237, 239) 8px;  
     }
     form{
-        margin-top: 75px;
+        margin-top: 100px;
         width: 75%;
+        box-shadow: 0 0 150px white;
     }
     .form-group {
     display: flex;
@@ -258,16 +262,19 @@
     .form-group input, .form-group textarea {
     padding: 10px;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
+    font-family: $secondaryFont;
+    background-color: #fbf4f4;
+
     }
 
     .form-group input:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #007bff;
     }
 
     .form-group textarea {
     height: 150px;
+    resize: none;
     }
 
     .submit-btn {
@@ -275,7 +282,6 @@
     width: 100%;
     margin-top: 20px;
     padding: 10px;
-    border-radius: 5px;
     border: none;
     background-color: #ffd3d3;
     color: black;
