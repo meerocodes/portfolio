@@ -15,7 +15,15 @@ const elementsToToggle = [prjDownArrow, lightMode,...header,...h1, ...sections, 
 // const goDark = document.getElementById('goDark');
 
 
-lightMode.addEventListener('click', function(){
+lightMode.addEventListener('click', toggleLightMode);
+
+lightMode.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+    toggleLightMode();
+  }
+});
+
+function toggleLightMode() {
   lightMode.classList.toggle('active');
   elementsToToggle.forEach(element => element.classList.toggle('light'));
 
@@ -27,5 +35,7 @@ lightMode.addEventListener('click', function(){
   } else {
     goDark.innerHTML = "go light";
   }
+}
 
-});
+
+
