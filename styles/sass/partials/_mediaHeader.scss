@@ -12,6 +12,13 @@
 }
 
 @media (max-width: 657px) {
+
+    .wrapper {
+        width:90%;
+    }
+    .navBar{
+        justify-content: space-between;
+    }
     .navMenu{
         position: fixed;
         left: -100%;
@@ -19,9 +26,8 @@
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.2);
         width: 100%;
-        margin-top: -10px;
+        margin-top: -20px;
         text-align: center;
-        transition: 0.1s;
         .navItem{
             margin: 15px 0;
 
@@ -31,10 +37,12 @@
     .navMenu.active{
         left:0;
         gap: 0px;
+        margin-top: -20px;
         justify-content: flex-start;
     }
    .hamburger {
         display:block;
+        
     }
     .hamburger.active .bar:nth-child(2){
         opacity: 0; 

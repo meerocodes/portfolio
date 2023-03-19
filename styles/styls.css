@@ -104,6 +104,7 @@ header .text h2 {
 .hamburger {
   display: none;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .bar {
@@ -714,6 +715,14 @@ footer {
   }
 }
 @media (max-width: 657px) {
+  .wrapper {
+    width: 90%;
+  }
+  .navBar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .navMenu {
     position: fixed;
     left: -100%;
@@ -724,10 +733,8 @@ footer {
             flex-direction: column;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
-    margin-top: -10px;
+    margin-top: -20px;
     text-align: center;
-    -webkit-transition: 0.1s;
-    transition: 0.1s;
   }
   .navMenu .navItem {
     margin: 15px 0;
@@ -735,6 +742,7 @@ footer {
   .navMenu.active {
     left: 0;
     gap: 0px;
+    margin-top: -20px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
