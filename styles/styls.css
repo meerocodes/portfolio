@@ -473,6 +473,7 @@ header .text h2 {
 }
 .projects .wrapper {
   height: 100%;
+  width: 98%;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,8 +533,9 @@ header .text h2 {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(0.8rem, 2vw, 1.2rem);
   text-shadow: 0 0 2px #000000;
-  padding: 5px 10px;
+  padding: 0;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .projects .wrapper .liveLinks {
   color: #e6dedd;
@@ -706,7 +708,6 @@ footer {
 
 @media (max-width: 1000px) {
   .projects .wrapper {
-    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -732,6 +733,11 @@ footer {
   }
   .contact form {
     width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .projects .wrapper {
+    width: 86%;
   }
 }
 @media (max-width: 1000px) {
