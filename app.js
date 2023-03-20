@@ -12,8 +12,8 @@ const arrowDown = document.getElementById('prjDownArrow');
 const socials = document.getElementsByClassName('socials');
 const arrowRight = document.getElementsByClassName('arrowRight');
 const span = document.getElementsByTagName('span');
-
-const elementsToToggle = [prjDownArrow, lightMode,...header,...h1, ...sections, ...aLinks, ...titles, ...skillIcons, ...socialIcon, ...p, ...socials, ...arrowRight, ...span];
+const dynamicText = document.getElementById('dynTxt');
+const elementsToToggle = [dynTxt, prjDownArrow, lightMode,...header,...h1, ...sections, ...aLinks, ...titles, ...skillIcons, ...socialIcon, ...p, ...socials, ...arrowRight, ...span];
 
 const goDark = document.getElementById('goDark');
 
@@ -39,6 +39,7 @@ function toggleLightMode() {
     goDark.innerHTML = "go light";
   }
 }
+// HAMBURGER MENU
 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.navMenu');
@@ -71,4 +72,52 @@ socialArrow.addEventListener('click', () => {
 
 });
 
+const textDisplay = document.getElementById('dynTxt');
+const words = ['CREATOR','DEV','GRAPHICS', 'FREELANCE', 'DESIGN',];
 
+let i = 0;
+let j = 0;
+let currentWord = [];
+let isDeleting = false
+let isEnd = false
+
+function loop (){
+    textDisplay.innerHTML = currentWord.join('')
+
+    if ( i < words.length){
+
+        if(!isDeleting && j <= words[i].length){
+            currentWord.push(words[i][j])
+            j++
+            textDisplay.innerHTML = currentWord.join('')
+
+        }
+
+        if(isDeleting && j <= words[i].length){
+            currentWord.pop(words[i][j])
+            j--
+            textDisplay.innerHTML = currentWord.join('')
+
+        }
+        
+
+        if(j == words[i].length){
+            isEnd = true
+            isDeleting = true
+        }
+        if (isDeleting && j === 0){
+            currentWord = []
+            isDeleting = false
+            i++
+            if (i == words.length){
+                i = 0
+            }
+        }
+    }
+    const speedUp = Math.random() * (80 - 50) + 50
+    const normalSpeed = Math.random() * (300 - 200) + 200
+    const time = isEnd ? 140 : isDeleting ? speedUp : normalSpeed
+    setTimeout(loop, time)
+
+}
+loop()

@@ -32,13 +32,17 @@ a .socialIcon.light{
         text-shadow: 0 0 20px black;     
     }
 }
+
 .logo.light {
     background-color: rgb(255, 245, 245);
 
 }
 h2.light {
     color: $lightModeFC;
-
+}
+#dynTxt.light{
+    color: $lightModeFC ;
+    text-shadow: 0 0 2px black;
 
 }
 // HEADER STYLES
@@ -56,11 +60,25 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        gap: 100px;
     }
+    
+    #dynTxt{
+        color: #fbf2f2;
+        font-size: clamp(1.4rem, 4vw, 2.5rem);
+        height: 100px;
+        font-family: $secondaryFont;
+        text-align: center;
+        position: absolute;
+        text-shadow: 0 0 2px white;
+        
+    }
+
     .text {
         text-align: center;
         color: $baseFC;
-        flex-grow: 2;
+     
 
 
         span{
