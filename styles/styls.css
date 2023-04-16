@@ -279,6 +279,7 @@ header .text h2 {
 }
 .navBar ul a {
   background-color: #000000;
+  border-radius: 2px;
   padding: 3px 3px;
   color: #e6dedd;
   font-size: clamp(1rem, 3vw, 1.2rem);
@@ -381,7 +382,7 @@ header .text h2 {
 
 .skills {
   border-top: solid rgb(252, 237, 239) 20px;
-  height: 100vh;
+  min-height: 100vh;
   min-height: 860px;
   background-image: url("../assets/sectionImage2.png");
   background-size: cover;
@@ -522,7 +523,7 @@ header .text h2 {
 }
 .projects .wrapper .imgWrap {
   display: inline-block;
-  width: 50%;
+  width: 66%;
   position: relative;
   margin-top: 100px;
 }
@@ -578,6 +579,47 @@ header .text h2 {
           align-items: center;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: float 5s ease-in-out infinite;
+          animation: float 5s ease-in-out infinite;
+}
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.projects .wrapper .projectContent:hover {
+  border-color: #ff866b;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 .projects .wrapper .projectContent:focus {
   background-color: rgb(0, 116, 154);
@@ -591,14 +633,29 @@ header .text h2 {
 }
 .projects .wrapper img {
   width: 100%;
-  -webkit-box-shadow: 0px 0px 20px rgba(173, 173, 173, 0.5);
-          box-shadow: 0px 0px 20px rgba(173, 173, 173, 0.5);
-  border-radius: 5px;
+  border-radius: 10px;
+  -webkit-animation: float 5s ease-in-out infinite;
+          animation: float 5s ease-in-out infinite;
+  padding: 0px 5px;
 }
-.projects .wrapper #firstProject {
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.projects .wrapper .projectLeft {
   margin-right: 150px;
 }
-.projects .wrapper #secondProject {
+.projects .wrapper .projectRight {
   margin-left: 150px;
 }
 .projects h2 {
@@ -611,7 +668,7 @@ header .text h2 {
 
 .contact {
   border-top: solid rgb(236, 199, 199) 20px;
-  height: 100vh;
+  min-height: 100vh;
   min-height: 860px;
   background-image: url("../assets/sectionImage3.png");
   background-size: cover;
@@ -730,11 +787,9 @@ footer {
     position: relative;
     margin-top: 100px;
   }
-  .projects .wrapper #firstProject {
-    margin-right: 0;
-  }
-  .projects .wrapper #secondProject {
+  .projects .wrapper .projectLeft, .projects .wrapper .projectRight {
     margin-left: 0;
+    margin-right: 0;
   }
   .contact form {
     width: 100%;

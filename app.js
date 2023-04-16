@@ -73,7 +73,7 @@ socialArrow.addEventListener('click', () => {
 });
 
 const textDisplay = document.getElementById('dynTxt');
-const words = ['CREATOR','DEV','GRAPHICS', 'FREELANCE', 'DESIGN',];
+const words = ['CREATOR','DEVELOPER','GRAPHICS', 'FREELANCE', 'DESIGN',];
 
 let i = 0;
 let j = 0;

@@ -228,6 +228,7 @@ header {
     }
     a{
         background-color: #000000;
+        border-radius: 2px;
         padding: 3px 3px;
         color: $baseFC;
         font-size: clamp(1rem, 3vw, 1.2rem);

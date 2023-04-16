@@ -42,7 +42,7 @@
 // SKILLS SECTION STYLES
 .skills {
     border-top: solid rgb(252, 237, 239) 20px;
-    height: 100vh;
+    min-height: 100vh;
     min-height: 860px;
     background-image:url('../assets/sectionImage2.png') ;
     background-size: cover;
@@ -104,6 +104,7 @@
     }
 }
 // PROJECTS SECTION STYLES
+
 .projects {
     border-top: solid rgb(252, 237, 239) 20px;
     min-height: 100vh;
@@ -147,7 +148,7 @@
         align-items:center;
         .imgWrap{
             display: inline-block;
-            width: 50%;
+            width: 66%;
             position: relative;
             margin-top: 100px;
 
@@ -196,6 +197,27 @@
             justify-content: center;
             align-items: center;
             transition: opacity 0.3s;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            animation: float 5s ease-in-out infinite;
+
+            @keyframes float {
+                0% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+                100% {
+                  transform: translateY(0);
+                }
+              }
+            &:hover {
+                border-color: #ff866b;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+              }
             &:focus{
                 background-color: rgb(0, 116, 154);
             }
@@ -206,22 +228,30 @@
         .imgWrap:hover .projectContent{
             opacity: 1;
             border-radius: 5px;
-           
-
         }
         img {
             width: 100%;
-            box-shadow: 0px 0px 20px rgba(173, 173, 173, 0.5);
-            border-radius: 5px;
-   
+            border-radius: 10px;    
+            animation: float 5s ease-in-out infinite;
+            padding: 0px 5px;
+            @keyframes float {
+                0% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+                100% {
+                  transform: translateY(0);
+                }
+              }
         }
-        #firstProject {
+        .projectLeft {
             margin-right: 150px;
             
            
 
-        }
-        #secondProject {
+        }.projectRight {
             margin-left: 150px;
            
 
@@ -241,7 +271,7 @@
 
 .contact {
     border-top: solid rgb(236, 199, 199) 20px;
-    height: 100vh;
+    min-height: 100vh;
     min-height: 860px;
     background-image: url('../assets/sectionImage3.png');
     background-size: cover;
