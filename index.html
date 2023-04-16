@@ -4,14 +4,167 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" type="image/x-icon" href="/assets/Yellow-Kiswah.png">
-
-    <link rel="stylesheet" href="style.css">
+    <title>Amiracle </title>
+    <link rel="icon" type="image/x-icon" href="/assets/magicPyramid.png">
+    <link rel="stylesheet" href="./styles/styls.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d74ec3fb0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-    <h1>Amiracle portfolio by the one and only Amir</h1>
+    <header id="header">
+        
+        <div class="wrapper">
+            
+            <nav class="navBar">
+                <a href="#header"><h2 class="logo">amiracle</h2></a>                
+                <ul class="navMenu">
+                    <li class="navItem"><a href = #skills >// skills</a></li>
+                    <li class="navItem"><a href = #projects >// projects</a></li>
+                    <li class="navItem"><a href = #contact >// get in touch</a></li>
+                    <div class="lightDarkModeContainer" class="navItem">
+                        <label id="lightChange"tabindex="0"></label>
+                            <div class="arrow bounce">
+                            <a class="fa fa-arrow-up fa-2x" id='topArrow'href="#"></a>
+                            </div>
+                            <p id="goDark">go light</p>
+                    </div>
+                </ul>
+              
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+               
+            </nav>
+         
+            <div class="text">
+                <span><h1>Amir</h1></span>
+                <h2>Front-End Developer | Graphic Designer </h2>
+            </div>
+            <ul class="dynamicText">
+                <li><h3 id="dynTxt">dev</h3></li>
+            </ul>
+
+            <div class="socialsArrow">
+                <div class="socialsTab">
+                    <span>// SOCIALS</span>
+                    <i class="fa-solid fa-chevron-right arrowRight"></i>
+                </div>
+            
+                <ul class="socials">
+                    <li><a href='https://github.com/meerocodes'><i class="fa-brands fa-github-alt socialIcon"></i></a></li>
+                    <li><a href ="mailto:amirest1997@gmail.com"><i class="fa-solid fa-inbox socialIcon"></i></a></li>
+                    <li><a href ="https://www.linkedin.com/in/meerocodes"><i class="fa-brands fa-linkedin-in socialIcon"></i></a></li>
+                </ul>
+            </div>
+        </div>
     </header>
+
+    <main>
+        <section class="skills" id = skills>
+            <div class="wrapper">
+                <h2>SKILLS</h2>
+                <ul class="skillList">
+                    <li><i class="fa-brands fa-git-alt skillIcon"></i><h3>GIT</h3></li>
+                    <li><i class="fa-brands fa-react skillIcon"></i><h3>REACT.js</h3></li>
+                    <li><i class="fa-brands fa-square-js skillIcon"></i><h3>JAVASCRIPT ES6</h3></li>
+                    <li><i class="fa-brands fa-sass skillIcon"></i><h3>SASS</h3></li>
+                    <li><i class="fa-brands fa-html5 skillIcon"></i><h3>HTML5</h3></li>
+                    <li><i class="fa-brands fa-css3-alt skillIcon"></i><h3>CSS3</h3></li>
+                    <li><i class="fa-solid fa-mobile skillIcon"></i><h3>RESPONSIVE DESIGN</h3></li>
+                    <li><i class="fa-solid fa-network-wired skillIcon"></i><h3>RESTful APIS</h3></li>
+                    <li><i class="fa-solid fa-cloud skillIcon"></i><h3>ADOBE CREATIVE CLOUD</h3></li>
+                    <li><i class="fa-brands fa-python skillIcon"></i><h3>PYTHON</h3></li>
+                    <li><i class="fa-solid fa-database skillIcon"></i><h3>FIREBASE</h3></li>
+                    <li><i class="fa-solid fa-universal-access skillIcon"></i><h3>ACCESSIBILITY</h3></li>
+                    <li><h3></h3></li>
+
+                </ul>
+
+
+            </div>
+        </section>
+
+
+        <section class="projects" id = projects>
+            <div class="wrapper">
+                <h2>PROJECTS</h2>
+                <p>hover to view details</p>
+                <i class="fa-solid fa-angle-down arrow" id="prjDownArrow"></i>
+                        
+                    <div class="imgWrap projectLeft" >
+                        <img src="./assets/pokejack.gif" alt="a gif of my pokejack project" >
+                        <div class="projectContent" tabindex="2">
+                            <h4>REACT.JS| SASS</h4>
+                            <h4 class="prjDescription"> Our group developed a React.js and Sass project that is a Pokemon-themed Blackjack game featuring components and conditionally rendered elements for a true video game experience. We incorporated APIs to generate the deck of cards and populate the game with Pokémon images and data, resulting in dynamic and constantly updating content. The project showcases our technical skills in React.js and Sass, as well as our ability to integrate third-party resources creatively for an engaging user experience</h4>
+                            <a href="https://github.com/DevinD55/project-2-gains-app" class="liveLinks">View Repo</a>
+                            <a href="https://pokejack.netlify.app/" class="liveLinks">View Live site</a>
+                        </div>
+                    </div>
+                    <div class="imgWrap projectRight" >
+                        <img src="./assets/prayerTimes.gif" alt="a gif of my pokejack project" >
+                        <div class="projectContent" tabindex="2">
+                            <h4>REACT.JS| API'S| FIREBASE</h4>
+                            <h4 class="prjDescription"> This application is built with React.js, API's and Firebase, enabling user authentication with both email/password and Google login. Additionally, the app utilizes the Prayer Times API, allowing users to input their city and country along with their preferred calculation method to receive daily prayer times tailored to their location. With a focus on user convenience and accessibility, this app offers a streamlined and personalized approach to prayer time tracking.</h4>
+                            <a href="https://github.com/DevinD55/project-2-gains-app" class="liveLinks">View Repo</a>
+                            <a href="https://prayer-times-amir.netlify.app/" class="liveLinks">View Live site</a>
+                        </div>
+                    </div>
+                    <div class="imgWrap projectLeft" >
+                    <img src="./assets/project2Gif.gif" alt="a desktop previewing my project" >
+                    <div class="projectContent" tabindex="1">
+                        <h4>JAVASCRIPT | HTML | CSS</h4>
+                        
+                        <h4 class="prjDescription"> This paired programming project enables users to choose a specific muscle group they wish to work out and generates multiple randomized workouts using a multiplier.</h4>
+                        <a href="https://github.com/DevinD55/project-2-gains-app" class="liveLinks">View Repo</a>
+                        <a href="https://radiant-crostata-d26a6d.netlify.app/" class="liveLinks"> View Live site</a>
+                    </div>
+                </div>
+
+                <div class="imgWrap projectRight" >
+                    <img src="./assets/project1.png" alt="a desktop previewing my project" >
+                    <div class="projectContent" tabindex="2">
+                        <h4>JAVASCRIPT | HTML | CSS</h4>
+                        <h4 class="prjDescription"> This multi-page website boasts a core design resembling that of an e-commerce store, featuring key pages such as the homepage, contact us, and about us.</h4>
+                        <a href="https://github.com/DevinD55/project-2-gains-app" class="liveLinks">View Repo</a>
+                        <a href="https://js-project1-amir.netlify.app/" class="liveLinks">View Live site</a>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <h2>GET IN TOUCH</h2>
+                
+                <form action="https://formspree.io/f/xeqwljbo" method="POST">
+                    <div class="form-group">
+                      <label for="name" class="sr-only">Name:</label>
+                      <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="email" class="sr-only">Email:</label>
+                      <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="message" class="sr-only">Message:</label>
+                      <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit</button>
+                  </form>
+                  
+            </div>
+        </section>
+    </main>
+    <footer>Amir 2023 ©</footer>
+    <script src="https://kit.fontawesome.com/d776406e42.js" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+@use './variables' as * ;
+
+ul, li, a {
+    text-decoration:none;
+    list-style: none;
+    font-family: $secondaryFont;
+    margin: 0;
+
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    font-family: $baseFont;
+    
+}
+
