@@ -532,7 +532,7 @@ header .text h2 {
 }
 .projects .wrapper h4 {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  font-size: clamp(0.6rem, 2vw, 1.2rem);
   text-shadow: 0 0 2px #000000;
   padding: 0;
   margin-bottom: 0;
@@ -541,7 +541,7 @@ header .text h2 {
 .projects .wrapper .liveLinks {
   color: #e6dedd;
   background-color: #000000;
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
   padding: 5px 10px;
   text-shadow: 0 0 8px #fbd7d7;
 }
@@ -797,7 +797,7 @@ footer {
 }
 @media (max-width: 767px) {
   .projects .wrapper {
-    width: 86%;
+    width: 90%;
   }
 }
 @media (max-width: 1000px) {
