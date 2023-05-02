@@ -155,7 +155,7 @@ header .text h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 95%;
   margin-top: 10px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -288,7 +288,7 @@ header .text h2 {
   border-radius: 2px;
   padding: 3px 3px;
   color: #e6dedd;
-  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
 }
 .navBar ul a:hover {
   color: pink;
@@ -304,7 +304,6 @@ header .text h2 {
       flex-shrink: 1;
   padding: 3px 3px;
   color: #e6dedd;
-  margin-left: 100px;
   z-index: 20;
   background-color: #000000;
 }
@@ -807,7 +806,7 @@ footer {
   }
 }
 @media (max-width: 1000px) {
-  .logo {
+  .logoLink {
     margin-left: 25px;
   }
 }
