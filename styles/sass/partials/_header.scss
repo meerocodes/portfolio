@@ -52,6 +52,8 @@ header {
     position: relative;
     background-size: cover;
     background-image: url("../assets/mainHeader.png"); 
+    transition: all 0.5s ease-in-out;
+
     &:hover {
 
     }
